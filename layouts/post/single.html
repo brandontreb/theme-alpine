@@ -12,6 +12,7 @@
   </header>
   <section class="e-content post-body">
       {{ .Content }}
+      {{ partial "media.html" . }}
   </section>
 
   {{ if .Site.Params.include_conversation }}

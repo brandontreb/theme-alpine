@@ -11,12 +11,8 @@
     </h2>
   </header>
   <div>
-	Replying to: <img src="{{ .Params.reply_to_avatar }}" width="22" height="22" style="width: 22px; height: 22px; vertical-align: top; border-radius: 11px; padding: 0px;" alt="{{ .Params.reply_to_username }}" />
-	{{ if eq .Params.reply_to_hostname "micro.blog" }}
-		<a href="{{ .Params.reply_to_url }}" class="u-in-reply-to">@{{ .Params.reply_to_username }}</a>
-	{{ else }}
-		<a href="{{ .Params.reply_to_url }}" class="u-in-reply-to">{{ .Params.reply_to_hostname }}</a>
-	{{ end }}
+	<!-- Replying to: <img src="{{ .Params.reply_to_avatar }}" width="22" height="22" style="width: 22px; height: 22px; vertical-align: top; border-radius: 11px; padding: 0px;" alt="{{ .Params.reply_to_username }}" /> -->
+  Replying to: <strong>@<a href="{{ .Params.reply_to_url }}" class="u-in-reply-to">{{ .Params.reply_to_hostname }}</a></strong>
   </div>
   <section class="e-content post-body">
       {{ .Content }}

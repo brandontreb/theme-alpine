@@ -7,10 +7,12 @@
   </header>
   <section class="post-body">
 	{{ .Content }}
+  {{ partial "media.html" . }}
   </section>
   </section>
   {{ else }}
 	{{ .Content }}
+  {{ partial "media.html" . }}
   {{ end }}
   <a href="{{ .Permalink }}" class="u-url">
 	<aside class="dates">

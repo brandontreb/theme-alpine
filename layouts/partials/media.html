@@ -1,0 +1,8 @@
+{{ $url := "https://brandontreb.com" }}
+{{ range $photo := .Params.photos }}        
+  {{ if $photo.url }}        
+    <img loading="lazy" src="{{ $photo.url }}" alt="{{ $photo.alt }}" title="{{ $photo.alt }}">  
+  {{ else if $photo.path }}
+    <img loading="lazy" src="{{ $url }}/{{ $photo.path }}" alt="{{ $photo.alt }}" title="{{ $photo.alt }}">
+  {{ end }}    
+{{ end }}
