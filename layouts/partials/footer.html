@@ -5,7 +5,30 @@
     <li><a href="/feed.xml">RSS</a></li>
     <li><a href="/feed.json">JSON Feed</a></li>
     <li><a href="/surprise-me/">Surprise me!</a></li>
-<!--    <li><a href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Micro.blog</a></li> -->
+    {{ with .Site.Params.microblog }}
+    <li><a href="https://micro.blog/{{ . }}" rel="me">Micro.blog</a></li>
+    {{ end }}    
+    {{ with .Site.Params.twitter }}
+    <li><a href="https://twitter.com/{{ . }}" rel="me">Twitter</a></li>
+    {{ end }}
+    {{ with .Site.Params.github }}
+    <li><a href="https://github.com/{{ . }}" rel="me">GitHub</a></li>
+    {{ end }}
+    {{ with .Site.Params.instagram }}
+    <li><a href="https://instagram.com/{{ . }}" rel="me">Instagram</a></li>
+    {{ end }}
+    {{ with .Site.Params.linkedin }}
+    <li><a href="https://linkedin.com/in/{{ . }}" rel="me">LinkedIn</a></li>
+    {{ end }}
+    {{ with .Site.Params.facebook }}
+    <li><a href="https://facebook.com/{{ . }}" rel="me">Facebook</a></li>
+    {{ end }}
+    {{ with .Site.Params.flickr }}
+    <li><a href="https://flickr.com/photos/{{ . }}" rel="me">Flickr</a></li>
+    {{ end }}
+    {{ with .Site.Params.youtube }}
+    <li><a href="https://youtube.com/{{ . }}" rel="me">YouTube</a></li>
+    {{ end }}    
 <!--     <li><a class="u-email" href="mailto:" rel="me">Email</a></li> -->
   </ul>
   <form method="get" id="search" action="https://duckduckgo.com/">

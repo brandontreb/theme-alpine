@@ -6,13 +6,11 @@
 	<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
   </header>
   <section class="post-body">
-	{{ .Content }}
-  {{ partial "media.html" . }}
+	{{ .Content }}  
   </section>
   </section>
   {{ else }}
-	{{ .Content }}
-  {{ partial "media.html" . }}
+	{{ .Content }}  
   {{ end }}
   <a href="{{ .Permalink }}" class="u-url">
 	<aside class="dates">
