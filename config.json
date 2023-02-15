@@ -2,6 +2,12 @@
 	"params": {
 		"alpine_accent_text_color": "#f29c38",
 		"alpine_accent_background_color": "#ffffff",
-		"alpine_hover_background_color": "#fffee4"
+		"alpine_hover_background_color": "#fffee4",
+		"authorization_endpoint": "https://micro.blog/indieauth/auth",
+		"token_endpoint": "https://micro.blog/indieauth/token",
+		"micropub_endpoint": "https://micro.blog/micropub",
+		"microsub_endpoint": "https://micro.blog/microsub/",
+		"webmention_endpoint": "https://micro.blog/webmention",
+		"subscription_endpoint": "https://micro.blog/subscribe"
 	}
 }
