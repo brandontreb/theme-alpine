@@ -19,7 +19,7 @@
   {{ partial "alpine.html" . }}
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
-	<link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="{{ .Site.BaseURL}}/favicon.png" type="image/x-icon" />
     
     <!-- TODO: Add RSS Link-->
       <link href="{{ "podcast.xml" | absURL }}" rel="alternate" type="application/rss+xml" title="Podcast" />
@@ -27,7 +27,7 @@
       <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
     
 
-	{{ with .Site.Params.microblog }}
+	{{ with .Site.Params.microblog_username }}
 	<link rel="me" href="https://micro.blog/{{ . }}" />
 	{{ end }}	
 	{{ with .Site.Params.twitter_username }}
@@ -63,4 +63,8 @@
     {{ range $filename := .Site.Params.plugins_html }}
     	{{ partial $filename $ }}
     {{ end }}
+	<!-- Scripts -->
+	{{ with .Site.Params.webmention_endpoint }}
+		<script id="script_conversation" data-webmention_url="{{ . }}" src="/conversation.js"></script>
+	{{ end }}
 </head>

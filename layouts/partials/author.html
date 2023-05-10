@@ -1,0 +1,18 @@
+{{ $url := .Site.BaseURL }}
+
+{{ with .Site.Author }}
+<span id="post-meta" class="clearfix p-author h-card">
+  {{ with .name }}
+  <a rel="me" class="p-name u-url" href="{{ $url }}">
+    {{ . }}
+  </a>       
+  {{ end }}
+  {{ with .avatar }}
+  <img class="u-photo" src="{{ . }}" width="96" height="96">          
+  {{ end }}
+  {{ with .note }}
+  <p class="p-note">{{ . }}</p>
+  {{ end }}  
+  </a>
+</section>
+{{ end }}
